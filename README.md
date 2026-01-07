@@ -2,7 +2,7 @@
 # HW1
 ## Devlog
 1. Jess Tran, They/Them
-2. 
+2. The plan that we outlined in the MG1 breakdown allowed me to plan what each script needed and what components each GameObject needed. We outlined that the player needed to be able to move and plant seeds, both with key presses. Knowing that, I recognized that these key inputs needed to be coded in the Update method, as that would allow Unity to check every frame for whether or not the player is holding down/pressing a key and execute actions accordingly. Also knowing that the player needed to store the number of seeds it had left + the number of seeds it had planted, those values were set to initial values in the Start method as to instantiate values at the beginning of the game, and the PlantSeed method was called in the Update method when the space key was pressed. PlantSeed executes the action of the player spawning seeds (as outlined in the document) by instantiating a plant prefab in the player's transform position + decreasing and increasing the number of seeds left and number of seeds planted respectively. It also passes these values through the UpdateSeeds method stored in the PlantCountUI class. In our document, we outlined that the UI's attributes were its text. I assigned the PlantCountUI script to the Canvas which takes in 2 text fields in the editor, both of which I assigned as the number texts for the seeds. UpdateSeeds then updates these text fields to match the argument passed by PlantSeed in the Player class. This executes the action outlined in the document of the UI updating the text.
 
 ## Open-Source Assets
 If you added any other outside assets, list them here!
